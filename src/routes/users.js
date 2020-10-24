@@ -23,7 +23,7 @@ router.post("/signup", async (req, res, next) => {
     return res.json({ status: false });
   } catch (error) {
     console.error(error);
-    res.json({ error: "Failed to signup user" });
+    res.json({ error: "Failed to signup user", e: error });
   }
 });
 
@@ -41,7 +41,7 @@ router.post("/login", async (req, res, next) => {
     return res.json({ isAuth: false });
   } catch (error) {
     console.error(error);
-    res.json({ error: "Failed to get has admin" });
+    res.json({ error: "Failed to get has admin", e: error });
   }
 });
 

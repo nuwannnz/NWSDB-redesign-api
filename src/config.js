@@ -7,6 +7,9 @@ module.exports = {
     },
   },
   db: {
-    path: "nwsdb.sqlite",
+    host: process.env.DB_HOST || "localhost",
+    database: process.env.DB_NAME || "procurement",
+    username: process.env.DB_USERNAME || "admin",
+    password: process.env.DB_PASSWORD || "password",
   },
 };
